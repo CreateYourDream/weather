@@ -1,0 +1,17 @@
+@mixin liquid-text($max, $min){
+    font-size: clamp(#{$min}px, #{$max / 1024 * 100}vw, #{$max}px);
+}
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin square($width){
+    width: $width;
+    aspect-ratio: 1;
+}
+@mixin icone-parametr($width){
+    content: "";
+    display: inline-block;
+    @include square($width);
+}
